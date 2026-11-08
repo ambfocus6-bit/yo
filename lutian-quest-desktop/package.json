@@ -1,0 +1,25 @@
+{
+  "name": "lutian-quest",
+  "productName": "Lutian Quest",
+  "version": "1.0.0",
+  "description": "Lutian Quest - a 16-bit pixel RPG with online co-op",
+  "main": "main.js",
+  "author": "You",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0"
+  },
+  "build": {
+    "appId": "com.lutian.quest",
+    "productName": "Lutian Quest",
+    "files": ["main.js", "index.html"],
+    "win": { "target": "nsis" },
+    "mac": { "target": "dmg", "category": "public.app-category.games" },
+    "linux": { "target": "AppImage", "category": "Game" }
+  }
+}
